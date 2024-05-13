@@ -25,8 +25,8 @@ module V1
             ctx[:data] = [I18n.t('models.users.sessions.errors.wrong_password')]
           end
 
-          def update_last_login_at(ctx, model:, **)
-            model.update_column(:last_login_at, Time.current)
+          def update_last_login_at(_ctx, model:, **)
+            model.update(last_login_at: Time.current)
           end
         end
       end

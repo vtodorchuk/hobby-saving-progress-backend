@@ -24,11 +24,11 @@ group :development, :test do
 
   gem 'brakeman', '~> 6.1', '>= 6.1.2'
   gem 'bundler-audit', '~> 0.9.1'
+  gem 'fasterer', '~> 0.11.0'
   gem 'rubocop', '~> 1.63', '>= 1.63.5'
   gem 'rubocop-performance', '~> 1.21'
   gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.2'
-  gem 'fasterer', '~> 0.11.0'
 end
 
 group :development do
