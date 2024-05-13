@@ -15,7 +15,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 gem 'draper', '~> 4.0', '>= 4.0.2'
 gem 'jsonapi-serializer', '~> 2.2'
-gem 'trailblazer-option', '~> 0.1.2'
+gem 'trailblazer-rails', '~> 2.4', '>= 2.4.3'
 
 gem 'jwt_sessions', '~> 3.2', '>= 3.2.2'
 
@@ -28,8 +28,11 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.21'
   gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.2'
+  gem 'fasterer', '~> 0.11.0'
 end
 
 group :development do
   gem 'spring'
+
+  gem 'annotate', '~> 3.2'
 end

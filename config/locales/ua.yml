@@ -1,0 +1,5 @@
+ua:
+  models:
+    user:
+      sessions:
+        wrong_password: Неправильний пароль або email
