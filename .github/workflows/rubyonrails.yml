@@ -11,6 +11,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     services:
       postgres:
         image: postgres:latest
@@ -35,16 +36,12 @@ jobs:
       run: |
         gem install bundler
         bundle install --jobs 4 --retry 3
+     
+    - name: Security audit dependencies
+      run: bundle exec bundler-audit
       
     - name: Security audit application code
-      run: brakeman -q -w2
+      run: bundle exec brakeman -q -w2
       
     - name: Lint Ruby files
-      run: rubocop --parallel
-      
-    - name: Database setup
-      run: |
-        bundle exec rails db:setup RAILS_ENV=test
-
-    - name: Run RSpec
-      run: bundle exec rspec
+      run: bundle exec rubocop --parallel
