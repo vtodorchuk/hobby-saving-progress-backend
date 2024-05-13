@@ -35,4 +35,5 @@ group :development do
   gem 'spring'
 
   gem 'annotate', '~> 3.2'
+  gem 'overcommit', '~> 0.63.0'
 end
