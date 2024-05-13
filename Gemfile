@@ -26,6 +26,8 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.21'
   gem 'rubocop-rails', '~> 2.24', '>= 2.24.1'
   gem 'rubocop-rspec', '~> 2.29', '>= 2.29.2'
+  gem 'bundler-audit', '~> 0.9.1'
+  gem 'brakeman', '~> 6.1', '>= 6.1.2'
 end
 
 group :development do

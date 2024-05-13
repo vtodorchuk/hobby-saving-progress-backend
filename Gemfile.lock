@@ -85,7 +85,12 @@ GEM
     bigdecimal (3.1.8)
     bootsnap (1.18.3)
       msgpack (~> 1.2)
+    brakeman (6.1.2)
+      racc
     builder (3.2.4)
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -280,6 +285,8 @@ PLATFORMS
 DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap
+  brakeman (~> 6.1, >= 6.1.2)
+  bundler-audit (~> 0.9.1)
   debug
   draper (~> 4.0, >= 4.0.2)
   image_processing (~> 1.2)
