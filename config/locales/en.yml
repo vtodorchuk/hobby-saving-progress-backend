@@ -1,5 +1,9 @@
-ua:
+en:
   models:
     users:
       sessions:
         wrong_password: Wrong password or email address
+      errors:
+        user_already_exists: User  already exists
+        not_found: User not found
+        can_not_destroy: User can't be destroyed

@@ -15,9 +15,9 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 gem 'draper', '~> 4.0', '>= 4.0.2'
 gem 'jsonapi-serializer', '~> 2.2'
-gem 'trailblazer-rails', '~> 2.4', '>= 2.4.3'
 
 gem 'jwt_sessions', '~> 3.2', '>= 3.2.2'
+gem 'pundit', '~> 2.3', '>= 2.3.2'
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]

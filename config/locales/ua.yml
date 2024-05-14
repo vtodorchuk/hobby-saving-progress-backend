@@ -1,5 +1,9 @@
 ua:
   models:
-    user:
+    users:
       sessions:
         wrong_password: Неправильний пароль або email
+      errors:
+        user_already_exists: Куристувач вже існує
+        not_found: Користувача не знайдено
+        can_not_destroy: Не можу видалити запис
