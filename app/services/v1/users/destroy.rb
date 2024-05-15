@@ -8,12 +8,6 @@ module V1
 
         render(nil, :ok)
       end
-
-      private
-
-      def user
-        @user ||= User.find_by(id: @params[:id])
-      end
     end
   end
 end

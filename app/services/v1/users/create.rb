@@ -3,9 +3,9 @@ module V1
     class Create < UserService
       def call
         return render(already_exists, :unprocessable_entity) if user
-        return render(UserSerializer.new(new_user, :ok)) if new_user.save
+        return render(new_user.errors.full_messages, :unprocessable_entity) unless new_user.save
 
-        render(new_user.errors.full_messages, :unprocessable_entity)
+        render(UserSerializer.new(new_user, :ok))
       end
 
       private

@@ -4,7 +4,7 @@ class UserPolicy < ApplicationPolicy
   end
 
   def show?
-    user.id == model.id
+    user.id == record.id
   end
 
   def update?

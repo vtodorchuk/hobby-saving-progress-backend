@@ -7,3 +7,4 @@ ua:
         user_already_exists: Куристувач вже існує
         not_found: Користувача не знайдено
         can_not_destroy: Не можу видалити запис
+        unauthorized: Відсутній доступ до цього функціоналу

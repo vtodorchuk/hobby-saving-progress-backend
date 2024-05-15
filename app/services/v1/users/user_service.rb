@@ -1,6 +1,10 @@
 module V1
   module Users
     class UserService < ApplicationService
+      def unauthorized
+        @unauthorized ||= I18n.t('models.users.errors.unauthorized')
+      end
+
       def not_found
         @not_found ||= I18n.t('models.users.errors.not_found')
       end
@@ -13,8 +17,16 @@ module V1
         @already_exists ||= I18n.t('models.users.errors.already_exists')
       end
 
+      def wrong_password
+        @wrong_password ||= I18n.t('models.users.sessions.wrong_password')
+      end
+
       def policy
-        @policy ||= UserPolicy.new(@current_user, @user)
+        @policy ||= UserPolicy.new(@current_user, user)
+      end
+
+      def user
+        @user ||= User.find_by(id: @params[:id])
       end
     end
   end

@@ -3,16 +3,10 @@ module V1
     class Update < UserService
       def call
         return render(unauthorized, :unauthorized) unless policy.update?
-        return render(already_exists, :unprocessable_entity) unless user
-        return render(UserSerializer.new(user, :ok)) if user.update(@params)
+        return render(not_found, :unprocessable_entity) unless user
+        return render(UserSerializer.new(user), :ok) if user.update(@params)
 
         render(user.errors.full_messages, :unprocessable_entity)
-      end
-
-      private
-
-      def user
-        @user ||= User.find_by(email: @params[:email])
       end
     end
   end

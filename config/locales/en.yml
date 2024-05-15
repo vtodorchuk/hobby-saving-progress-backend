@@ -7,3 +7,4 @@ en:
         user_already_exists: User  already exists
         not_found: User not found
         can_not_destroy: User can't be destroyed
+        unauthorized: User is not authorized
