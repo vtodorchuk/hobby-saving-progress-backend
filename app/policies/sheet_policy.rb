@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class UserPolicy < ApplicationPolicy
+class SheetPolicy < ApplicationPolicy
   def create?
     true
   end

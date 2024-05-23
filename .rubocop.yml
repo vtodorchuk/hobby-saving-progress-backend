@@ -16,9 +16,6 @@ Metrics/MethodLength:
 Style/Documentation:
   Enabled: false
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 Rails/OutputSafety:
   Enabled: false
 

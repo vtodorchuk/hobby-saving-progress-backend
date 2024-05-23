@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationService
   def initialize(options = {})
     options.each do |key, value|
